@@ -15,6 +15,8 @@ The dashboard is at http://localhost:5173, the backend API is at http://localhos
 
 Set `PORT` for the backend listener (binds to `0.0.0.0`), `FRONTEND_ORIGIN` to the allowed frontend origin(s), and `MCP_ALLOWED_HOSTS` to the backend hostname(s), comma-separated. In local development the default CORS origin is `http://localhost:5173` and MCP host allowlist is `localhost,127.0.0.1`. The SDK host and origin validation is enabled; the deployed backend hostname and configured frontend hostname are allowed. The MCP Streamable HTTP endpoint is stateless. No separate MCP server process is needed.
 
+The frontend reads `VITE_API_URL` from `frontend/.env` for REST requests. Set it to the backend origin (for example `https://followup-desk-api.onrender.com`) before starting Vite or building for deployment. Leave it empty to use the local Vite `/api` proxy.
+
 ## REST API
 
 - `GET /api/health`
