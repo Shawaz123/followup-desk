@@ -38,6 +38,9 @@ backend/data/*.tmp
 # Coverage
 coverage/
 
+# TypeScript build cache
+*.tsbuildinfo
+
 # IDE and OS files
 .vscode/
 .idea/
